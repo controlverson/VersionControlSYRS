@@ -1,7 +1,9 @@
 # VersionControlSYRS
 This is a demonstration of how can we store information using version control and relational database model system.
 
-
+NOTE : 1) Do  # not #  try git init / npm init  
+       2) If any fatal error is displayed try git remote add origin https://github.com/controlverson/VersionControlSYRS.git
+       
 Step 1: git config --global user.name "yourname"
 <br/>
 Step 2: git config --global user.email "yourmail"
