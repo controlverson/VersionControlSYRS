@@ -13,8 +13,11 @@ Step 3: git clone "https://github.com/controlverson/VersionControlSYRS.git" mast
 Step 4: git pull origin master
 <br/>
 Step 5: To run node app.js on terminal
-<br/>
+
+
 # After you make your changes 
+
+
 <br/>
 Step 6: git add .
 <br/>
