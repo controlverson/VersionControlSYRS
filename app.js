@@ -1,7 +1,7 @@
 var express=require('express');
 
 var app=express();
-
+app.use(express.static(__dirname + '/public'));
 app.set('view engine','ejs');
 
 app.use(require('body-parser').urlencoded({extended : true}));
