@@ -1,6 +1,28 @@
 var express=require('express');
-
+const mysql= require('mysql');
+//create mysql connection
+const db= mysql.createConnection({
+  host:'localhost',
+  user:'root',
+  password:'root',
+  databse:'VersionControl'
+});
+//connect
+db.connect((err)=>{
+  if(err){
+    throw err;
+  }
+  console.log('MySql Connected...');
+});
 var app=express();
+app.get('/createdb',(req,res)=>{
+  let sql= 'CREATE DATABASE VersionControl';
+  db.query(sql,(err,result)=>{
+    if(err) throw err;
+    console.log(result);
+    res.send('Database created...');
+  });
+});
 app.use(express.static(__dirname + '/public'));
 app.set('view engine','ejs');
 
