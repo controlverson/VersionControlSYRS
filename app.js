@@ -5,7 +5,8 @@ const db= mysql.createConnection({
   host:'localhost',
   user:'root',
   password:'root',
-  databse:'VersionControl'
+  database:'version_control',
+  multipleStatements:'true'
 });
 //connect
 db.connect((err)=>{
@@ -15,14 +16,13 @@ db.connect((err)=>{
   console.log('MySql Connected...');
 });
 var app=express();
-app.get('/createdb',(req,res)=>{
-  let sql= 'CREATE DATABASE VersionControl';
+/*app.get('/createdb',(req,res)=>{
+  let sql= 'SELECT * from user';
   db.query(sql,(err,result)=>{
     if(err) throw err;
     console.log(result);
-    res.send('Database created...');
   });
-});
+});*/
 app.use(express.static(__dirname + '/public'));
 app.set('view engine','ejs');
 
@@ -33,7 +33,18 @@ app.set('port',process.env.PORT || 3000);
 app.get('/',function(req,res){
     res.render('home');
 });
-
+app.get('/views/feedback',function(req,res){
+  res.render('feedback');
+  //let sql= 'INSERT into feedback(U_ID,email,feedback) values(?,?,?)';
+  //db.query(sql,(err,result)=>{
+    //if(err) throw err;
+    //console.log(result);
+    //res.send('result');
+  //});
+});
+app.post('/views/feedback', (req,res) => {
+  res.send(req.body);
+});
 
 
 app.use(function(req,res,next){
