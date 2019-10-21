@@ -53,6 +53,23 @@ app.get('/views/feedback',function(req,res){
 app.get('/views/signup',function(req,res){
   res.render('signup');
 });
+app.get('/views/login',function(req,res){
+  res.render('login');
+});
+app.get('/views/repository',function(req,res){
+  res.render('repository');
+});
+app.get('/views/addFiles',function(req,res){
+  res.render('addFiles');
+});
+app.post('/views/addFiles', (req,res) => {
+    
+  res.render('addFiles');
+});
+app.post('/views/repository', (req,res) => {
+    
+  res.render('addFiles');
+});
 app.post('/views/feedback', (req,res) => {
     message="'"+req.body.feedback+"'";
     fnumber="'"+req.body.num+"'";

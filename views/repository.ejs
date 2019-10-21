@@ -1,0 +1,104 @@
+<% include partials/header.ejs %>
+<div class="row mt-5 p-4" id="register">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Create Repository
+        </h1>
+        <form action="" method="POST">
+            <div class="form-group">
+                    <label for="R_ID">Repository's ID</label>
+                    <input
+                      type="number"
+                      id="R_ID"
+                      name="R_ID"
+                      class="form-control"
+                      placeholder="Enter Repository ID"
+                      value="<%= typeof R_ID != 'undefined' ? R_ID : '' %>"
+                    />
+                  </div>
+          <div class="form-group">
+            <label for="URL">URL</label>
+            <input
+              type="text"
+              id="URL"
+              name="URL"
+              class="form-control"
+              placeholder="Enter URL"
+              value="<%= typeof URL != 'undefined' ? URL : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="descr">Description</label>
+            <input
+              type="text"
+              id="descr"
+              name="descr"
+              class="form-control"
+              placeholder="Enter a description"
+              value="<%= typeof descr != 'undefined' ? descr : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="f_name">File's Name</label>
+            <input
+              type="text"
+              id="f_name"
+              name="f_name"
+              class="form-control"
+              placeholder="Enter file's name"
+              value="<%= typeof f_name != 'undefined' ? f_name : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="U_ID">User ID</label>
+            <input
+              type="number"
+              id="U_ID"
+              name="U_ID"
+              class="form-control"
+              placeholder="Enter User ID"
+              value="<%= typeof U_ID != 'undefined' ? U_ID : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="U_ID">User ID</label>
+            <input
+              type="number"
+              id="U_ID"
+              name="U_ID"
+              class="form-control"
+              placeholder="Enter User ID"
+              value="<%= typeof U_ID != 'undefined' ? U_ID : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="License">License</label>
+            <input
+              type="text"
+              id="lis"
+              name="lis"
+              class="form-control"
+              placeholder="License"
+              value="<%= typeof lis != 'undefined' ? lis : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="visibility">Visibility</label>
+            <input
+              type="number"
+              id="vis"
+              name="vis"
+              class="form-control"
+              placeholder="Visibility"
+              value="<%= typeof vis != 'undefined' ? vis : '' %>"
+            />
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-info btn-block rounded-0 py-2">Add File<a href="/views/addFiles.ejs"></button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
